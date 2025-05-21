@@ -31,7 +31,7 @@ const Account = () => {
     })
     setErrMsg();
   });
-  const updateUserProfile = () => {
+  const updateUserProfile = (inputs) => {
     axios.post(`/user/profile`, inputs)
       .then(() => cancelForm())
       .catch(e => setErrMsg(`${e.response.data}. Please try it again.`));
